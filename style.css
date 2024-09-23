@@ -1,0 +1,510 @@
+*{
+    border: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: #8CC461;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+#head {
+    width: 800px;
+height: 158px;
+margin: 30px 0 30px 0;
+border-radius: 13px;
+border: 2px solid #FFFFFF;
+display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#head-name{
+    font-family: Roboto;
+font-size: 40px;
+font-weight: 600;
+line-height: 46.88px;
+letter-spacing: 0.1em;
+text-align: left;
+color: #FFFFFF;
+margin: 0 15px 0 15px;
+}
+
+#head-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-box {
+    width: 139px;
+height: 128px;
+border-radius: 9px;
+background: #FFFFFF;
+margin: 0 15px 0 15px;
+}
+
+.score-board {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-name {
+    font-family: Roboto;
+font-size: 17px;
+font-weight: 600;
+letter-spacing: 0.1em;
+    text-align: center;
+    color: #656565;
+
+}
+
+.score{
+    font-family: Roboto;
+font-size: 68px;
+font-weight: 700;
+/* line-height: 79.69px; */
+text-align: center;
+color: #252525;
+
+}
+
+#game{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-element {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    margin: 50px auto;
+    display: flex;
+}
+.big-circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: white;
+    /* border: 16px solid #0074B6; */
+    box-shadow: -1px 1px 11px 0px #00000059;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
+
+#stone {
+    border: 16px solid #0074B6;
+    top: 0%;
+    left: 0%;
+}
+#scissor {
+    border: 16px solid #BD00FF;
+    top: 0%;
+    right: 0%;
+}
+#paper {
+    border: 16px solid #FFA943;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#line-1{
+    width: 133px;
+height: 0px;
+position: absolute;
+left: 35%;
+top: 15%;
+border: 12px solid #000000A3;
+
+}
+
+#line-2{
+    width: 130.91px;
+height: 0px;
+transform: rotate(60.58deg);
+position: absolute;
+margin-left: 70px;
+bottom: 40%;
+border: 12px solid #000000A3;
+
+}
+
+#line-3{
+    width: 107.91px;
+height: 0px;
+position: absolute;
+right: 17%;
+bottom: 46%;
+transform: rotate(120deg);
+border: 12px solid #000000A3;
+
+}
+/* .middle-element::before,
+.middle-element::after,
+.middle-element .line {
+    content: '';
+    position: absolute;
+    border: 2px solid #000;
+}
+
+.middle-element .line1 {
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    transform: rotate(-45deg);
+}
+
+.middle-element .line2 {
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    transform: rotate(45deg);
+}
+
+.middle-element .line3 {
+    top: 50%;
+    left: 50%;
+    width: 200px;
+} */
+
+
+.rule-class-button {
+    width: 119px;
+height: 40px;
+border-radius: 10px;
+border: 2px solid #FFFFFF;
+background: #8CC461;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-family: Roboto;
+font-size: 21px;
+font-weight: 600;
+line-height: 24.61px;
+letter-spacing: 0.1em;
+text-align: center;
+padding: 7px;
+color: #FFFFFF;
+
+}
+
+#rules_head{
+    font-family: Roboto;
+font-size: 29px;
+margin: 20px 0 15px 0;
+font-weight: 500;
+line-height: 33.98px;
+text-align: center;
+color: #FFF;
+}
+
+#rules_list{
+    width: 241px;
+    list-style: none;
+/* height: 27px; */
+margin: 0px 20px 0px 20px;
+
+
+    font-family: Roboto;
+font-size: 13px;
+font-weight: 400;
+line-height: 20.23px;
+text-align: left;
+color: #FFF;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    margin-bottom: 7px;
+}
+
+ul li {
+    display: flex; /* Use flexbox to align the bullet with the content */
+    /* align-items: center; */
+}
+
+ul li::before {
+    content: "\25A0"; /* Unicode for a solid square */
+    color: yellow; /* Set the color of the square */
+    font-size: 1.2em; /* Adjust the size of the bullet */
+    margin-top: 7px;
+    margin-right: 10px; /* Space between the bullet and text */
+    line-height: 1; /* Ensure the bullet doesn't affect line height */
+}
+
+
+#game-rules {
+    width: 290px;
+    visibility: hidden;
+height: 350px;
+border-radius: 13px;
+background: #004429;
+border: 7px solid #FFFFFF;
+position: absolute;
+right: 30px;
+bottom: 70px;
+}
+
+#close-rules {
+    visibility:hidden;
+    width: 50px;
+height: 50px;
+background: #FF0000;
+border-radius: 50%;
+border: 5px solid #FFFFFF;
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+right: 15px;
+bottom: 385px;
+cursor: pointer;
+
+}
+#x {
+    font-family: Dangrek;
+font-size: 42px;
+font-weight: 400;
+line-height: 79.49px;
+color: #FFFFFF;
+}
+
+#next-button {
+    visibility: hidden;
+}
+
+
+#result-container {
+    width: 900px;
+    height: 400px;
+    /* visibility: hidden; */
+    /* display: flex; */
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#result-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#you_ {
+    font-family: Roboto;
+font-size: 39px;
+font-weight: 800;
+margin: 10px;
+line-height: 45.7px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #FFFFFF;
+
+}
+
+#against{
+    font-family: Roboto;
+font-size: 25px;
+margin: 10px;
+font-weight: 800;
+line-height: 29.3px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #FFFFFF;
+}
+
+.play_again {
+    cursor: pointer;
+    width: 174px;
+height: 44px;
+border-radius: 9px;
+background: #FFFFFF;
+border: none;
+font-family: Roboto;
+font-size: 15px;
+font-weight: 600;
+line-height: 17.58px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #6B6B6B;
+
+}
+
+.aura-circle{
+    width: 350px;
+    height: 350px;
+box-shadow: 0px 10px 62px 0px #1DA82BC9;
+border-radius: 50%;
+animation: glow 2s linear infinite alternate;
+}
+@keyframes glow{
+    to {
+      box-shadow: 0px 10px 62px 50px #1DA82BC9;
+    }
+}
+
+#circle-11{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    padding: 25px;
+    background: #2E9A2563;
+
+}
+#circle-12{
+    height: 300px;
+    width: 300px;
+    padding: 25px;
+    border-radius: 50%;
+    background: #1DA82BC9;
+
+}
+#circle-13{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    padding: 25px;
+    background: #3B6720;
+
+
+}
+#circle-14{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: #FFF;
+    border: 16px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#circle-21{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    padding: 25px;
+    background: #2E9A2563;
+
+}
+#circle-22{
+    height: 300px;
+    width: 300px;
+    padding: 25px;
+    border-radius: 50%;
+    background: #1DA82BC9;
+
+}
+#circle-23{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    padding: 25px;
+    background: #3B6720;
+
+
+}
+#circle-24{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: #FFF;
+    border: 16px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .win_player{
+    display: contents;
+} */
+
+/* .win_comp{
+    display: contents;
+} */
+
+.picked{
+    font-family: Roboto;
+font-size: 17px;
+font-weight: 600;
+line-height: 19.92px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #FFF;
+}
+
+#success_page{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#stars{
+    animation: twinkle 2s infinite;
+}
+@keyframes twinkle {
+    0%, 20%, 100% {
+        opacity: 0.5; /* Dimmed */
+    }
+    10%, 30% {
+        opacity: 1; /* Bright */
+    }
+}
+
+
+
+#trophy {
+    margin-top: -200px;
+}
+
+#hurray{
+    font-family: Roboto;
+font-size: 91px;
+font-weight: 600;
+margin: 30px;
+line-height: 106.64px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #FFF;
+}
+
+#you_won{
+    font-family: Roboto;
+font-size: 41px;
+font-weight: 600;
+margin: 0 0 50px 0;
+line-height: 48.05px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #FFF;
+}
+
+

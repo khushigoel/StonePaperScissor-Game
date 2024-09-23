@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <section id="head">
+        <h1 id="head-name">ROCK<br>PAPER<br>SCISSOR</h1>
+        <div id="head-right">
+            <div class="head-box">
+                <div id="computer-content" class="score-board">
+                    <div id="computer-text" class="team-name">COMPUTER<br>SCORE</div>
+                    <div id="computer-score" class="score">0</div>
+                </div>
+            </div>
+            <div class="head-box">
+                <div id="player-content" class="score-board"></div>
+                    <div id="player-text" class="team-name">YOUR<br>SCORE</div>
+                    <div id="player-score" class="score">0</div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    <section id="game">
+        <div class="middle-element">
+            <div class="big-circle" id="stone">
+                <img src="images/stone.png" alt="stone">
+            </div>
+            <div id="line-1"></div>
+            <div class="big-circle" id="scissor">
+                <img src="images/scissor.png" alt="scissor">
+            </div>
+            <div id="line-2"></div>
+            <div class="big-circle" id="paper">
+                <img src="images/paper.png" alt="paper">
+            </div>
+            <div id="line-3"></div>
+        </div>
+    </section>
+    <button class="rule-class-button" id="rules-button">RULES</button>
+    <div id="game-rules">
+        <h3 id="rules_head">Game Rules</h3>
+        <ul  id="rules_list">
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+    </div>
+    <div id="close-rules">
+        <p id="x">X</p>
+    </div>
+
+    <button class="rule-class-button" id="next-button">NEXT</button>
+
+    <section id="result-container">
+        <div id="player">
+            <p class="picked" id="you_picked">YOU PICKED</p>
+            <div class="aura-circle win_player" id="player-circle">
+                <div class="win_player" id="circle-11">
+                    <div class="win_player" id="circle-12">
+                        
+                        <div class="win_player" id="circle-13">
+                            <div id="circle-14">
+                                <img id="player-img" src="images/paper.png" alt="player_choice">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="result-content">
+            <p id="you_">YOU WIN</p>
+            <p id="against">AGAINST PC</p>
+            <button class="play_again" id="play_ag">PLAY AGAIN</button>
+        </div>
+        <div id="computer">
+            <p class="picked" id="pc_picked">PC PICKED</p>
+            <div class="aura-circle win_comp" id="comp-circle">
+                <div class="win_comp" id="circle-21">
+                    <div class="win_comp" id="circle-22">
+                        
+                        <div class="win_comp" id="circle-23">
+                            <div id="circle-24">
+                                <img id="comp-img" src="images/paper.png" alt="comp_choice">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="success_page">
+        <img id="stars" src="images/stars.png" alt="stars">
+        <img id="trophy" src="images/trophy.png" alt="trophy">
+        <p id="hurray">HURRAY!!</p>
+        <p id="you_won">YOU WON THE GAME</p>
+        <button class="play_again" id="play_ag_2">PLAY AGAIN</button>
+    </section>
+
+    <script  src="script.js"></script>
+
+    
+</body>
+</html>
